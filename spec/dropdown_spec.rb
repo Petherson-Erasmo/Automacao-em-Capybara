@@ -1,5 +1,5 @@
 
-describe 'Caixa de seleção', :dropdown do
+describe 'Caixa de opção', :dropdown do
     # o , :dropdow significa uma tag
     it 'Item especifico simples' do
         visit 'https://training-wheels-protocol.herokuapp.com/dropdown'
