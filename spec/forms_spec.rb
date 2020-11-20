@@ -17,6 +17,9 @@ describe 'Forms' do
     
         expect(find('#flash').visible?).to be true
         
+        # expect(find('#flash').text).to eql 'Olá, Tony Stark. Você acessou a área logada!' # essa da erro pois é encontrado um X 
+        # expect(find('#flash').text).to include 'Olá, Tony Stark. Você acessou a área logada!' # essa funciona também.
+        expect(find('#flash')).to have_content 'Olá, Tony Stark. Você acessou a área logada!' # essa e a de cima funciona normalmente
         
         # visit "https://training-wheels-protocol.herokuapp.com/login"
         # fill_in 'username', with: 'stark'
