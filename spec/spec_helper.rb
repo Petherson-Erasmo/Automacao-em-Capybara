@@ -19,4 +19,5 @@ end
 # Na linha a baixo eu informo que eu vou usar o selenium no google chrome
 Capybara.configure do |config|
   config.default_driver = :selenium_chrome
+  # Caso queira automatizar com o firefox basta trocar o selenium_chrome por apenas selenium
 end
