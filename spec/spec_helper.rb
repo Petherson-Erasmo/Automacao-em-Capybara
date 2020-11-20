@@ -12,7 +12,7 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
   # eu estou incluindo a DSL do capybara que são todos os metodos, funções e recursos do capybara 
-  # dentro do rspec isso vai ficar conhecido dentro dos arquivos spec
+  # dentro do rspec isso vai ficar conhecido dentro dos arquivos rspec
   config.include Capybara::DSL
 end
 
