@@ -20,11 +20,14 @@ describe 'Caixa de seleção', :upload do
         expect(div_arquivo.text).to eql 'arquivo.txt'
     end
 
-    it 'Upload com imagem' do
+    it 'Upload com imagem', :imagem do
         attach_file('file-upload', @imagem)
         click_button 'Upload'
         
-        sleep 5
+        # Pedindo para imprimir o tempo que o capybara espera para até um elemento seja exibido na página é de no máx 2s
+        # Com isso mexemos no arquivo spec_helper.rb para aumentarmos esse tempo de espera.
+        # puts Capybara.default_max_wait_time
+        # sleep 5
         div_image = find('#new-image')
         expect(div_image[:src]).to include '/uploads/banner640x480.png'
     end

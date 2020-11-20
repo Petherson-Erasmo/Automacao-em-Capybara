@@ -20,4 +20,5 @@ end
 Capybara.configure do |config|
   config.default_driver = :selenium_chrome
   # Caso queira automatizar com o firefox basta trocar o selenium_chrome por apenas selenium
+  config.default_max_wait_time = 5
 end
