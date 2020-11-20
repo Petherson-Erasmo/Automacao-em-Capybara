@@ -30,4 +30,45 @@ describe 'Forms' do
         
         # expect(find('#flash').visible?).to be true
     end
+    
+    it 'senha incorreta' do
+        visit 'https://training-wheels-protocol.herokuapp.com/login'
+
+        page.has_css?('.button', text: 'Login', wait: 10)
+    
+        fill_in 'username', with: 'stark'
+    
+        fill_in 'password', with: 'pet123'
+    
+        find('i', text:'Login').click()
+    
+        #click_button ' Login'
+    
+        page.has_css?('#flash', wait: 5)
+    
+        expect(find('#flash').visible?).to be true
+        expect(find('#flash')).to have_content 'Senha é invalida!'
+
+    end
+  
+    
+    it 'usuário não cadastrado' do
+        visit 'https://training-wheels-protocol.herokuapp.com/login'
+
+        page.has_css?('.button', text: 'Login', wait: 10)
+    
+        fill_in 'username', with: 'Petherson'
+    
+        fill_in 'password', with: 'jarvis!'
+    
+        find('i', text:'Login').click()
+    
+        #click_button ' Login'
+    
+        page.has_css?('#flash', wait: 5)
+    
+        expect(find('#flash').visible?).to be true
+        expect(find('#flash')).to have_content 'O usuário informado não está cadastrado!'
+    end
+  
 end
