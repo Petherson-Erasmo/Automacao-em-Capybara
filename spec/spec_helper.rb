@@ -14,11 +14,16 @@ RSpec.configure do |config|
   # eu estou incluindo a DSL do capybara que são todos os metodos, funções e recursos do capybara 
   # dentro do rspec isso vai ficar conhecido dentro dos arquivos rspec
   config.include Capybara::DSL
+
+  # O comando a seguir serve para definir o tamanho do navegador 
+  config.before(:example) do 
+    page.current_window.resize_to(1280, 800)
+  end
 end
 
 # Na linha a baixo eu informo que eu vou usar o selenium no google chrome
 Capybara.configure do |config|
-  config.default_driver = :selenium_chrome_headless
+  config.default_driver = :selenium_chrome
   # Caso eu queira que os testes rodem sem eu subir o Chrome e ficar vendo a página basta eu passar :selenium_chrome_headless
   # Isso pode ser útil pois eu posso rodar dentro de um servidor que não tem interface visual
   # Caso queira automatizar com o firefox basta trocar o selenium_chrome por apenas selenium
