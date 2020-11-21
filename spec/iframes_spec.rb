@@ -29,8 +29,8 @@ describe 'Iframes' do
             # O comando $(".box-iframe").attr("id", "tempId") é um comando do JQuery 
             # E transformei o comando JQuery uma string colocando-os dentro de ''
             script = '$(".box-iframe").attr("id", "tempId");'
-            # com o comando a seguir eu peço para a página executar um script que criei
-            # com isso antes executar os comandos dentro do within eu add um id 
+            # Com o comando a seguir eu peço para a página executar um script que criei
+            # Com isso antes executar os comandos dentro do within eu add um id 
             page.execute_script(script)
 
             within_frame('tempId') do
