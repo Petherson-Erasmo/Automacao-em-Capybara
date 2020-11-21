@@ -4,7 +4,7 @@ describe 'Iframes' do
         # Esse cenário contém um Id para poder selecionar o Iframe.
 
         before(:each) do
-            visit 'https://training-wheels-protocol.herokuapp.com/nice_iframe'
+            visit '/nice_iframe'
         end
     
         it 'Adicionar ao carrinho' do
@@ -21,7 +21,7 @@ describe 'Iframes' do
         # E o método within_iframe só aceita tag name ou id
 
         before(:each) do
-            visit 'https://training-wheels-protocol.herokuapp.com/bad_iframe'
+            visit '/bad_iframe'
         end
     
         it 'Carrinho deve estar vazio' do

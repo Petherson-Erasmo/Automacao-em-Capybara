@@ -23,4 +23,5 @@ Capybara.configure do |config|
   # Isso pode ser útil pois eu posso rodar dentro de um servidor que não tem interface visual
   # Caso queira automatizar com o firefox basta trocar o selenium_chrome por apenas selenium
   config.default_max_wait_time = 15
+  config.app_host = 'https://training-wheels-protocol.herokuapp.com' # transformei eum uma URL padrão
 end

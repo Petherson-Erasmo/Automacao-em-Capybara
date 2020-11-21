@@ -4,7 +4,7 @@ describe 'Caixa de seleção', :radio do
     # o , :radio signiradioica uma tag
 
     before(:each) do
-        visit 'https://training-wheels-protocol.herokuapp.com/radios'
+        visit '/radios'
     end
 
     it 'Seleção por ID' do

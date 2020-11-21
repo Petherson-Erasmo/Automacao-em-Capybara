@@ -9,7 +9,7 @@ describe 'Caixa de seleção', :upload do
 # depois eu concateno com o caminho relativo.
         @arquivo = Dir.pwd + '/spec/fixtures/arquivo.txt'
         @imagem = Dir.pwd + '/spec/fixtures/banner640x480.png'
-        visit 'https://training-wheels-protocol.herokuapp.com/upload'
+        visit '/upload'
     end
 
     it 'Upload com arquivo texto' do

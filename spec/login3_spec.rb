@@ -2,7 +2,7 @@
 describe 'login com cadastro', :login3 do
 
     before(:each) do
-        visit 'https://training-wheels-protocol.herokuapp.com/access'
+        visit '/access'
     end
     
     it 'Login com sucesso' do

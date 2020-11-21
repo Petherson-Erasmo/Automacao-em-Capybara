@@ -4,7 +4,7 @@ describe 'Caixa de seleção', :checkbox do
     # o , :checkbox significa uma tag
 
     before(:each) do
-        visit 'https://training-wheels-protocol.herokuapp.com/checkboxes'
+        visit '/checkboxes'
     end
 
     it 'Marcando opção' do

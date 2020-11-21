@@ -3,7 +3,7 @@ describe 'Caixa de seleção', :hover do
     # o , :hover significa uma tag
 
     before(:each) do
-        visit 'https://training-wheels-protocol.herokuapp.com/hovers'
+        visit '/hovers'
     end
 
     it 'Quando passo o mause sobre o Blade' do

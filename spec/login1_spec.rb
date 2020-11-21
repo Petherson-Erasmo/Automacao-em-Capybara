@@ -1,7 +1,7 @@
 
 describe 'Forms' do
     it 'login com sucesso' do
-        visit 'https://training-wheels-protocol.herokuapp.com/login'
+        visit '/login'
 
         page.has_css?('.button', text: 'Login', wait: 10)
     
@@ -21,7 +21,7 @@ describe 'Forms' do
         # expect(find('#flash').text).to include 'Olá, Tony Stark. Você acessou a área logada!' # essa funciona também.
         expect(find('#flash')).to have_content 'Olá, Tony Stark. Você acessou a área logada!' # essa e a de cima funciona normalmente
         
-        # visit "https://training-wheels-protocol.herokuapp.com/login"
+        # visit "/login"
         # fill_in 'username', with: 'stark'
         # fill_in 'password', with: 'jarvis!'
         
@@ -32,7 +32,7 @@ describe 'Forms' do
     end
     
     it 'senha incorreta' do
-        visit 'https://training-wheels-protocol.herokuapp.com/login'
+        visit '/login'
 
         page.has_css?('.button', text: 'Login', wait: 10)
     
@@ -53,7 +53,7 @@ describe 'Forms' do
   
     
     it 'usuário não cadastrado' do
-        visit 'https://training-wheels-protocol.herokuapp.com/login'
+        visit '/login'
 
         page.has_css?('.button', text: 'Login', wait: 10)
     
